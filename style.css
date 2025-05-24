@@ -10,7 +10,9 @@ header {
     background: #333;
     color: white;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;;
 }    
 nav {
     display: flex;
@@ -39,20 +41,37 @@ nav ul li a {
     text-decoration: none;
 }
 #hero {
-    padding: 50px;
+    padding: 80px 20px;
     background: #007BFF;
     color: white;
+    
 }
 .btn {
-    display: inline-block;
+    padding: 10px 20px;
     background: white;
     color: #007BFF;
-    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     text-decoration: none;
-    margin-top: 20px;
+    font-weight: bold;
+}
+.btn:hover {
+    background-color: #0056b3;
+    color: white;
+}
+nav ul li a:hover {
+    text-decoration: underline;
 }
 section {
-    padding: 40px;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .project-list {
     display: flex;
@@ -63,17 +82,22 @@ section {
     background: white;
     padding: 20px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    
+}
+.project-list img{
+    width: auto;
+    height: 300px;
 }
 form input, form textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
 }
-button {
-    padding: 10px 20px;
-    background: #007BFF;
-    color: white;
-    border: none;
+#about p{
+    padding: 20px;
+    text-align: justify;
 }
 footer {
     background: #333;
@@ -82,18 +106,29 @@ footer {
 }
 
 /* below this is all the project file style */
-section{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-}
-.explaination{
-    
+
+.explanation{
     text-align: justify;
+    padding: 10px 20px;
+    margin: 10px auto;
+    max-width: 800px;
 } 
-table{
-    border: 1px solid black;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
+table, th, td {
+    border: 1px solid #ccc;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f0f0f0;
+}
+
 .project-head{
     background: #333;
     color: white;
@@ -102,20 +137,27 @@ table{
     align-items: center;
     border: 1px solid white;
     gap: 50px;
-    
 }
+.project-head a{
+    text-decoration: none;
+    color: white;
+}
+.project-head a:hover{
+    background-color: #008CBA;
+}
+
+
 .appendix-pic{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    gap: 20px;
-    flex-wrap: wrap; 
+    display: grid;
+    grid-template-columns: 300px 300px;
 }
+
+
 .project-pic{
-    height: auto;
-    width: 350px;
-    border: 5px solid black;
-    box-shadow: 5px 5px 10px gray;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    display: block;
     
     
 }
@@ -124,3 +166,29 @@ table{
     transform: scale(1.1);
 }
 
+.Learning{
+    padding: 20px; 
+    border-radius: 8px;
+}
+
+.Learning ul{
+    list-style-type: none; 
+    padding: 40px;
+}
+
+.Learning li{
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
